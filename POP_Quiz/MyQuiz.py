@@ -1,3 +1,4 @@
+# Quiz Program Codes
 import streamlit as st
 import pandas as pd
 from PIL import Image
@@ -8,13 +9,13 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 QUESTION_FILE = os.path.join(BASE_DIR, "Questions.txt")
 ANSWER_FILE = os.path.join(BASE_DIR, "Answers.txt")
 
-
+# Quiz Program Questions - Where the Question.txt is read by MyQuiz
 def load_questions():
 
     questions = []
 
     if not os.path.exists(QUESTION_FILE):
-        st.error("Questions.txt not found")
+        st.error("Error: Questions.txt not found.")
         st.write("Files available:", os.listdir(BASE_DIR))
         return questions
 
@@ -52,7 +53,7 @@ def load_questions():
 
     return questions
 
-
+# Quiz GUI where the participants answer the questions
 def run_quiz():
 
     st.title("Malaysian Culinary Food Quiz")
