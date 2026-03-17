@@ -1,3 +1,4 @@
+# Participant Results
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -6,6 +7,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# The Answers.txt is where the participants response are stored
 ANSWER_FILE = os.path.join(BASE_DIR, "Answers.txt")
 
 st.title("Quiz Results Analysis")
